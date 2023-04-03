@@ -80,6 +80,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\BaseEstudo.mdf" />
+    <Content Include="App_Data\BaseEstudo_log.ldf">
+      <DependentUpon>BaseEstudo.mdf</DependentUpon>
+    </Content>
     <Content Include="cssStyle\styleLogin.css" />
     <Content Include="cssStyle\StyleSheet2.css" />
     <Content Include="Default.aspx" />
@@ -129,9 +133,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
