@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Dapper;
+using EstudoWebService.Models;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -13,38 +16,22 @@ namespace EstudoWebService
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
-            // Cria uma conexão com o banco de dados
-            SqlConnection connection = new SqlConnection("Data Source=.;Integrated Security=SSPI; Initial Catalog=EstudoJornada");
-
-            // Cria uma consulta SQL para obter as informações do cartão
-            string sqlQuery = "SELECT Empresa, Unidade, Data, Temperatura, Umidade, Presentes FROM Teste";
-
-            // Cria um objeto Command para executar a consulta SQL
-            SqlCommand command = new SqlCommand(sqlQuery, connection);
-
-            // Abre a conexão com o banco de dados
-            connection.Open();
-
-            // Executa a consulta SQL e obtém um objeto DataReader para ler os resultados
-            SqlDataReader reader = command.ExecuteReader();
-
-            // Verifica se há linhas de dados retornadas
-            if (reader.HasRows)
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                // Lê os dados da primeira linha do resultado da consulta
-                reader.Read();
+                var result = connection.QuerySingle<Teste>("SELECT Empresa, Unidade, Data, Temperatura, Umidade, Presentes FROM Teste");
 
                 // Atualiza o conteúdo do cartão com as informações obtidas do banco de dados
-                empresaLabel.Text = reader.GetString(0);
-                unidadeLabel.Text = reader.GetString(1);
-                dataLabel.Text = reader.GetDateTime(2).ToString("dd/MM/yyyy HH:mm:ss");
-                temperaturaLabel.Text = reader.GetDouble(3).ToString();
-                umidadeLabel.Text = reader.GetDouble(4).ToString();
+                empresaLabel.Text = result.Empresa;
+                unidadeLabel.Text = result.Unidade;
+                dataLabel.Text = result.Data.ToString("dd/MM/yyyy HH:mm:ss");
+                temperaturaLabel.Text = result.Temperatura.ToString();
+                umidadeLabel.Text = result.Umidade.ToString();
 
                 // Converte a lista de presentes em uma lista de strings
                 List<string> presentes = new List<string>();
-                string[] nomes = reader.GetString(5).Split(',');
+                string[] nomes = result.Presentes.Split(',');
                 foreach (string nome in nomes)
                 {
                     presentes.Add(nome.Trim());
@@ -54,10 +41,6 @@ namespace EstudoWebService
                 presentesList.DataSource = presentes;
                 presentesList.DataBind();
             }
-
-            // Fecha o objeto DataReader e a conexão com o banco de dados
-            reader.Close();
-            connection.Close();
         }
     }
 }
