@@ -32,7 +32,7 @@ namespace EstudoWebService.Controllers
                     using (IDbConnection dbConn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
                     {
                         dbConn.Open();
-                         dbConn.Execute($@"INSERT INTO [dbo].[ParametrosEsp32] ([Data],[Temperatura],[Umidade]) VALUES (@Data,@Temperatura,@Umidade)", new { Data = parametros.Data, Temperatura = parametros.Temperatura, Umidade = parametros.Umidade });
+                        dbConn.Execute($@"INSERT INTO [dbo].[ParametrosEsp32] ([Data],[Temperatura],[Umidade]) VALUES (@Data,@Temperatura,@Umidade)", new { Data = parametros.Data, Temperatura = parametros.Temperatura, Umidade = parametros.Umidade });
                         return Json(true);
                     }
                 }
