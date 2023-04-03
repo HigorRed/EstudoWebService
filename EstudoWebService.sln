@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstudoWebService", "EstudoWebService.csproj", "{52D7A74A-F6CD-423B-BF10-381BF16349DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstudoWebService", "EstudoWebService\EstudoWebService.csproj", "{52D7A74A-F6CD-423B-BF10-381BF16349DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
