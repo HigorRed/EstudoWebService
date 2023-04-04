@@ -7,9 +7,11 @@ namespace EstudoWebService.Models
 {
     public class RFIDparametrosSaida
     {
-
+      
         public string Nome { get; set; }
         public DateTime DataSaida { get; set; }
+
+        public string Tag { get; set; }
 
     }
 }

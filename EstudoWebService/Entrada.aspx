@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Entrada.aspx.cs" Inherits="EstudoWebService.Default" Async="true" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Entrada.aspx.cs" Inherits="EstudoWebService.Entrada" Async="true" %>
 
 <!DOCTYPE html>
 
@@ -9,12 +9,6 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <div>
-                <p>
-                    <asp:Label ID="lblNome"> Nome </asp:Label>
-                    <asp:TextBox ID="txtNome" runat="server" />
-                </p>
-            </div>
             <div>
                 <p>
                     <asp:Label ID="lblTemp"> Temperatura </asp:Label>

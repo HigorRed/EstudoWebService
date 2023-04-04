@@ -9,6 +9,12 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <div>
+                <p>
+                    <asp:Label ID="lblTag"> Tag </asp:Label>
+                    <asp:TextBox ID="txtTag" runat="server" />
+                </p>
+            </div>
              <div>
                 <p>
                     <asp:Label ID="lblNome"> Nome </asp:Label>

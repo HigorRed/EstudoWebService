@@ -13,7 +13,7 @@ using System.Web.UI.WebControls;
 
 namespace EstudoWebService
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class Entrada : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

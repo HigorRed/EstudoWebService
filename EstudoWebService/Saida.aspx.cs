@@ -33,16 +33,19 @@ namespace EstudoWebService
 
             var paramentoTeste = new RFIDparametrosSaida()
             {
+                
+                Nome = (txtNome.Text),
                 DataSaida = DateTime.Now,
-                Nome =(txtNome.Text),
+                Tag = txtTag.Text,
+             
               
             };
 
             var serialized = JsonConvert.SerializeObject(paramentoTeste);
 
             var body = new StringContent(serialized, Encoding.UTF8, "application/json");
-            //http://servidor/api/AtualizacaoParamentos/Atualizar
-            var httpResponse = await client.PostAsync($"https://{Context.Request.Url.Host}:{Context.Request.Url.Port}/api/AtualizacaoRFIDSaida/Atualizar", body);
+            //http://servidor/api/AtualizacaoRFIDSaida/Inserir
+            var httpResponse = await client.PostAsync($"https://{Context.Request.Url.Host}:{Context.Request.Url.Port}/api/AtualizacaoRFIDSaida/Inserir", body);
 
             var result = await httpResponse.Content.ReadAsStringAsync();
 

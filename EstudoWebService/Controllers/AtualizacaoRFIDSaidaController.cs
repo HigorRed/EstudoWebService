@@ -1,15 +1,15 @@
-﻿using Dapper;
-using EstudoWebService.Models;
+﻿using EstudoWebService.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Results;
+using Dapper;
 
 namespace EstudoWebService.Controllers
 {
@@ -23,7 +23,7 @@ namespace EstudoWebService.Controllers
 
         [HttpPost]
         //[Route("Atualizar")]
-        public JsonResult<bool> Atualizar(RFIDparametrosSaida parametros)
+        public JsonResult<bool> Inserir(RFIDparametrosSaida parametros)
         {
             if (parametros != null)
             {
@@ -32,7 +32,7 @@ namespace EstudoWebService.Controllers
                     using (IDbConnection dbConn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
                     {
                         dbConn.Open();
-                        dbConn.Execute($@"INSERT INTO [dbo].[RFIDSaida] ([Id],[Nome], [DataSaida]) VALUES (@Id,@Nome, @DataSaida)", new { Nome = parametros.Nome, DataSaida= parametros.DataSaida });
+                        dbConn.Execute($@"INSERT INTO [dbo].[SAIDA] ([Nome],[DataSaida],[Tag]) VALUES (@Nome,@DataSaida,@Tag)", new {Nome=parametros.Nome, DataSaida = parametros.DataSaida, Tag= parametros.Tag });
                         return Json(true);
                     }
                 }
