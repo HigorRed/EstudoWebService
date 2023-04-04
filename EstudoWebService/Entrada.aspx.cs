@@ -31,9 +31,11 @@ namespace EstudoWebService
             client.Timeout = new TimeSpan(0, 30, 0);
 
 
-            var paramentoTeste = new ParamentrosESP32()
+            var paramentoTeste = new RFIDparametrosEntrada()
             {
-                Data = DateTime.Now,
+                Tag=txtTag.Text,
+                Nome=txtNome.Text,
+                DataEntrada = DateTime.Now,
                 Temperatura = decimal.Parse(txtTemp.Text),
                 Umidade = decimal.Parse(txtUmid.Text),
             };
@@ -42,7 +44,7 @@ namespace EstudoWebService
 
             var body = new StringContent(serialized, Encoding.UTF8, "application/json");
             //http://servidor/api/AtualizacaoParamentos/Atualizar
-            var httpResponse = await client.PostAsync($"https://{Context.Request.Url.Host}:{Context.Request.Url.Port}/api/AtualizacaoParamentos/Atualizar", body);
+            var httpResponse = await client.PostAsync($"https://{Context.Request.Url.Host}:{Context.Request.Url.Port}/api/AtualizacaoRFIDEntrada/Adicionar", body);
 
             var result = await httpResponse.Content.ReadAsStringAsync();
 

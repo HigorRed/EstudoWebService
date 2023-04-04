@@ -11,6 +11,18 @@
         <div>
             <div>
                 <p>
+                    <asp:Label ID="lblTag"> Tag </asp:Label>
+                    <asp:TextBox ID="txtTag" runat="server" />
+                </p>
+            </div>
+            <div>
+                <p>
+                    <asp:Label ID="lblNome"> Nome </asp:Label>
+                    <asp:TextBox ID="txtNome" runat="server" />
+                </p>
+            </div>
+            <div>
+                <p>
                     <asp:Label ID="lblTemp"> Temperatura </asp:Label>
                     <asp:TextBox ID="txtTemp" runat="server" />
                 </p>
