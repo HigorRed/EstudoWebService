@@ -33,7 +33,7 @@ namespace EstudoWebService.Controllers
                     {
                         dbConn.Open();
                         dbConn.Execute($@"INSERT INTO [dbo].[Entrada] ([Nome],[Data],[Tag],[Umidade],[Temperatura]) VALUES (@Nome,@Data,@Tag,@Umidade,@Temperatura)",
-                            new { Nome = parametros.Nome, Data = parametros.DataEntrada, Tag = parametros.Tag, Umidade = parametros.Umidade, Temperatura = parametros.Temperatura });
+                            new { Nome = parametros.Nome, Data = parametros.Data, Tag = parametros.Tag, Umidade = parametros.Umidade, Temperatura = parametros.Temperatura });
                         return Json(true);
                     }
                 }

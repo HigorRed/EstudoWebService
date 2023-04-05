@@ -15,32 +15,37 @@ namespace EstudoWebService
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
             string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                var result = connection.QuerySingle<Teste>("SELECT Empresa, Unidade, Data, Temperatura, Umidade, Presentes FROM Teste");
-
-                // Atualiza o conteúdo do cartão com as informações obtidas do banco de dados
-                empresaLabel.Text = result.Empresa;
-                unidadeLabel.Text = result.Unidade;
-                dataLabel.Text = result.Data.ToString("dd/MM/yyyy HH:mm:ss");
-                temperaturaLabel.Text = result.Temperatura.ToString();
-                umidadeLabel.Text = result.Umidade.ToString();
-
-                // Converte a lista de presentes em uma lista de strings
-                List<string> presentes = new List<string>();
-                string[] nomes = result.Presentes.Split(',');
-                foreach (string nome in nomes)
+                try
                 {
-                    presentes.Add(nome.Trim());
-                }
+                    connection.Open();
+                    var entradas = connection.Query<RFIDparametrosEntrada>("SELECT tag, nome, temperatura, umidade, data FROM entrada ORDER BY Data Desc").FirstOrDefault();
 
-                // Atualiza o conteúdo da lista de presentes com as informações obtidas do banco de dados
-                presentesList.DataSource = presentes;
-                presentesList.DataBind();
+                    if (entradas != null)
+                    {
+
+                        tagLabel.Text = entradas.Tag;
+                        NomeLabel.Text = entradas.Nome;
+                        temperaturaLabel.Text = entradas.Temperatura.ToString();
+                        umidadeLabel.Text = entradas.Umidade.ToString();
+                        DataLabel.Text = entradas.Data.ToString("dd/MM/yyyy HH:mm:ss");
+
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
             }
         }
     }
 }
+
+
+
+
+
+

@@ -35,7 +35,7 @@ namespace EstudoWebService
             {
                 Tag=txtTag.Text,
                 Nome=txtNome.Text,
-                DataEntrada = DateTime.Now,
+                Data = DateTime.Now,
                 Temperatura = decimal.Parse(txtTemp.Text),
                 Umidade = decimal.Parse(txtUmid.Text),
             };
