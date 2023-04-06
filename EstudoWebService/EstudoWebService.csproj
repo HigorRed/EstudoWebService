@@ -90,6 +90,12 @@
     <Content Include="Global.asax" />
     <Content Include="Images\background.PNG" />
     <Content Include="Images\bd.png" />
+    <Content Include="Images\fundoEntrada.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\fundoLogin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Login.aspx" />
     <Content Include="Saida.aspx" />
     <Content Include="Web.config" />
