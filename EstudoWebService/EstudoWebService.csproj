@@ -96,6 +96,7 @@
     <Content Include="Images\fundoLogin.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\logo.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="Saida.aspx" />
     <Content Include="Web.config" />

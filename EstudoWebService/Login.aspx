@@ -6,9 +6,9 @@
 
 <div class="login-bg">
     <div>
-        <form id="formLogin" runat="server">
+        <form id="formLogin" runat="server">            
             <div>
-                <label for="txtUsuario">Usuário:</label>
+                <label for="txtUsuario">Usuário: </label>
                 <input type="text" id="txtUsuario" name="txtUsuario" runat="server" />
             </div>
             <div>

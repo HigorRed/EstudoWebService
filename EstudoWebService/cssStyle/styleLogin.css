@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    font-family: Verdana;
 }
 
 #formLogin {
@@ -20,8 +21,7 @@
 
     #formLogin label {
         display: block;
-        margin-bottom: 10px;
-        font-weight: bold;
+        margin-bottom: 10px;        
     }
 
     #formLogin input[type="text"], #formLogin input[type="password"] {
@@ -34,7 +34,7 @@
     }
 
 #btnEntrar {
-    background-color: #4CAF50;
+    background-color: #1743EB;
     color: #fff;
     border: none;
     padding: 10px 20px;
