@@ -15,31 +15,31 @@ namespace EstudoWebService
     {
 
         /// <summary>
-        /// empresaLabel control.
+        /// tagLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label empresaLabel;
+        protected global::System.Web.UI.WebControls.Label tagLabel;
 
         /// <summary>
-        /// unidadeLabel control.
+        /// NomeLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label unidadeLabel;
+        protected global::System.Web.UI.WebControls.Label NomeLabel;
 
         /// <summary>
-        /// dataLabel control.
+        /// DataLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label dataLabel;
+        protected global::System.Web.UI.WebControls.Label DataLabel;
 
         /// <summary>
         /// temperaturaLabel control.
@@ -58,14 +58,5 @@ namespace EstudoWebService
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label umidadeLabel;
-
-        /// <summary>
-        /// presentesList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater presentesList;
     }
 }
