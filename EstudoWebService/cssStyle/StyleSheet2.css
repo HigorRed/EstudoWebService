@@ -8,7 +8,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("../Images/background.PNG");
+    background-image: url("../Images/fundoEntrada.png");
     height: 100%;
     background-size: cover;
     display: flex;
