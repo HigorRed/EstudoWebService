@@ -9,7 +9,7 @@ namespace EstudoWebService.Models
     {
       
         public string Nome { get; set; }
-        public DateTime DataSaida { get; set; }
+        public DateTime Data { get; set; }
         public string Tag { get; set; }
 
     }

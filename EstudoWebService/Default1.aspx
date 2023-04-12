@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default1.aspx.cs" Inherits="EstudoWebService.Default1" %>
 
 <link href="cssStyle/StyleSheet2.css" type="text/css" rel="stylesheet" />
-
 <div class="card-wrapper">
     <div class="card">
         <h2>Informações de Entrada</h2>
@@ -35,6 +34,7 @@
                 <td><asp:Label ID="umidadeLabel" runat="server"></asp:Label></td>
             </tr>
         </table> 
+     <button class="btn-report"onclick="window.location.href='RelatorioSaida.aspx';" id="btnRelatorio">Relatório de Saída</button>
     </div>
 </div>
 

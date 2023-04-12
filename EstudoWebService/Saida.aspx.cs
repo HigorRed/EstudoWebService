@@ -35,7 +35,7 @@ namespace EstudoWebService
             {
                 
                 Nome = (txtNome.Text),
-                DataSaida = DateTime.Now,
+                Data = DateTime.Now,
                 Tag = txtTag.Text,
              
               

@@ -17,9 +17,6 @@ namespace EstudoWebService
         {
 
         }
-
-
-
         protected void btnEntrar_ServerClick(object sender, EventArgs e)
         {
             string usuario = txtUsuario.Value.Trim();
@@ -35,10 +32,7 @@ namespace EstudoWebService
                     dbConn.Open();
                     var contagem = dbConn.QueryFirstOrDefault<int>(query, new { Usuario = usuario, Senha = senha });
 
-                    var teste = dbConn.QueryFirstOrDefault("SELECT Empresa, Presentes FROM Teste");
-
-                    string empresa = teste.Empresa;
-                    string Presentes = teste.Presentes;
+               
 
                     if (contagem > 0)
                         Response.Redirect("Default1.aspx");
@@ -51,26 +45,6 @@ namespace EstudoWebService
             {
                 Response.Write($"<script>alert('{ex.Message}');</script>");
             }
-
-            //using (SqlConnection connection = new SqlConnection(connectionString))
-            //{
-            //    SqlCommand command = new SqlCommand(query, connection);
-            //    command.Parameters.AddWithValue("@Usuario", usuario);
-            //    command.Parameters.AddWithValue("@Senha", senha);
-
-            //    connection.Open();
-            //    int count = (int)command.ExecuteScalar();
-
-            //    if (count > 0)
-            //    {
-            //        Response.Redirect("Default1.aspx");
-            //    }
-            //    else
-            //    {
-            //        // exibe uma mensagem de erro para o usuário
-            //        Response.Write("<script>alert('Usuário ou senha inválidos.');</script>");
-            //    }
-            //}
         }
     }
 }

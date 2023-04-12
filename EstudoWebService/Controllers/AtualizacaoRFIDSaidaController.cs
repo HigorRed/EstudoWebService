@@ -32,8 +32,8 @@ namespace EstudoWebService.Controllers
                     using (IDbConnection dbConn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString))
                     {
                         dbConn.Open();
-                        dbConn.Execute($@"INSERT INTO [dbo].[SAIDA] ([Nome],[DataSaida],[Tag]) VALUES (@Nome,@DataSaida,@Tag)",
-                            new {Nome=parametros.Nome, DataSaida = parametros.DataSaida, Tag= parametros.Tag });
+                        dbConn.Execute($@"INSERT INTO [dbo].[SAIDA] ([Nome],[Data],[Tag]) VALUES (@Nome,@Data,@Tag)",
+                            new {Nome=parametros.Nome, Data = parametros.Data, Tag= parametros.Tag });
                         return Json(true);
                     }
                 }

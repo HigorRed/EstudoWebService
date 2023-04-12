@@ -85,6 +85,7 @@
     </Content>
     <Content Include="cssStyle\styleLogin.css" />
     <Content Include="cssStyle\StyleSheet2.css" />
+    <Content Include="cssStyle\StyleSheet3.css" />
     <Content Include="Default1.aspx" />
     <Content Include="Entrada.aspx" />
     <Content Include="Global.asax" />
@@ -100,6 +101,7 @@
     <Content Include="Login.aspx" />
     <Content Include="Saida.aspx" />
     <Content Include="Web.config" />
+    <Content Include="RelatorioSaida.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -141,6 +143,13 @@
     </Compile>
     <Compile Include="Saida.aspx.designer.cs">
       <DependentUpon>Saida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RelatorioSaida.aspx.cs">
+      <DependentUpon>RelatorioSaida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RelatorioSaida.aspx.designer.cs">
+      <DependentUpon>RelatorioSaida.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
