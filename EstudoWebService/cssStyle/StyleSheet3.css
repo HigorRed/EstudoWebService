@@ -4,32 +4,31 @@
     
 }
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url("../Images/fundoEntrada.png");
+    background-image: url('../Images/fundoEntrada.png');
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
     background-color:black;
-    background-repeat:no-repeat;
-    flex-direction: column;
-    padding-left: 560px;
-    font-family: Verdana;
-    padding-top: 18%;
 }
+
+
 
 
 .card {
     background-color: #ffffff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
-    text-align: center center;
+    text-align: center;
     background-color: white;
-    width: 450px;
-    height: 380px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
+    position : relative; left : 300px; top : 150px;
+    border-radius: 10px
+
+
 }
 
 
@@ -37,7 +36,7 @@ table {
     width: 100%; 
     border-collapse: collapse; 
     text-align: center; 
-    margin-bottom: 20px;
+    margin-bottom: 0;
     padding-bottom: 0;
 }
 
@@ -47,3 +46,4 @@ th, td {
     border: 1px solid black; 
 }
 
+/*coment*/
