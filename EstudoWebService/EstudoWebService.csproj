@@ -84,8 +84,7 @@
       <DependentUpon>BaseEstudo.mdf</DependentUpon>
     </Content>
     <Content Include="cssStyle\styleLogin.css" />
-    <Content Include="cssStyle\StyleSheet2.css" />
-    <Content Include="cssStyle\StyleSheet3.css" />
+    <Content Include="cssStyle\StyleBase.css" />
     <Content Include="Default1.aspx" />
     <Content Include="Entrada.aspx" />
     <Content Include="Global.asax" />
